@@ -1,0 +1,20 @@
+deep learning models learn patterns from data by adjusting internal weights during training.
+a recurrent neural network processes sequences by passing information from one step to another.
+in a one to one architecture the network receives a single input and produces a single output without unrolling across time steps.
+this differs from one to many networks that take one input and generate a sequence of outputs.
+it also differs from many to one networks that take a sequence of inputs and produce a single output.
+many to many networks take a sequence and produce another sequence such as in machine translation.
+character level models predict the next character based on the current character using probability distributions over a vocabulary.
+training involves feeding one hot encoded vectors into the network and comparing predictions against the true next character.
+the loss function used here is categorical cross entropy which measures how far the predicted distribution is from the actual one.
+gradient descent updates the weights of the recurrent layer and the dense output layer after every batch.
+once trained the network can generate new text by feeding its own predicted character back in as the next input.
+this creates a simple text generator even though the network itself never sees more than one character at a time.
+neural networks like this are often used as an introduction to sequence modeling before moving to long short term memory networks.
+long short term memory networks and gated recurrent units solve problems that simple recurrent networks struggle with such as vanishing gradients.
+however for small vocabularies and short patterns a simple recurrent network trained in a one to one fashion works reasonably well.
+streamlit makes it easy to wrap a trained model inside an interactive web interface without writing any frontend code.
+the user can enter a starting character choose how many characters to generate and immediately see the result.
+this project demonstrates the full pipeline from raw text to trained model to interactive prediction interface.
+experimenting with different starting characters and generation lengths helps build intuition about how the model behaves.
+larger datasets and deeper networks generally produce more coherent and varied generated text.
