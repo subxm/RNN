@@ -1,10 +1,39 @@
 # RNN Projects
 
-This repository contains both versions of the RNN demo as sibling folders so
-they show up side by side at the repo root:
+This repository contains all three RNN demos as sibling folders so they show
+up side by side at the repo root:
 
 - [OneToOneRNN](OneToOneRNN)
+- [ManytoOneRNN](ManytoOneRNN)
 - [ManytoManyRNN](ManytoManyRNN)
+
+## ManytoOneRNN
+
+A spam classification demo built with a many-to-one RNN. The model consumes a
+sequence of words and produces one output label for the whole message.
+
+### Folder structure
+
+```
+ManytoOneRNN/
+  app.py              Streamlit UI
+  requirements.txt
+  spam.csv            Training dataset
+  spam_model.keras    Saved model
+  tokenizer.pkl       Saved tokenizer
+```
+
+### Run
+
+Open a terminal inside `ManytoOneRNN` and run:
+
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+If the app is started from the repo root, the paths still resolve correctly
+because they are now based on the app file location.
 
 ## OneToOneRNN
 
